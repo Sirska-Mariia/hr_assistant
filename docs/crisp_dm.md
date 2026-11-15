@@ -1,55 +1,46 @@
 # CRISP-DM log
 
 ## 1. Business understanding
-(TODO: users, success criteria, scope, out-of-scope — fill in from docs/scope.md)
+Employees ask repetitive HR questions and request leave. Goal: answer from policies with sources, track leave in a database, refer to HR
+when the policies do not support an answer. Success = correct, source-supported answers, correct referrals, correct leave decisions,
+no invented rules. Details and out-of-scope items: docs/scope.md.
 
 ## 2. Data understanding
-Six fictional policies for Nordlight Software (data/policies/), ~1350 words, numbered sections for citation.
-Deliberately included: condition-dependent rules (probation, contract type), gaps not covered by any policy
-(parental leave, relocation, stock options, cancellations by the system), cross-policy details that must be
-combined (leave §3.2 + benefits §1.2 + onboarding §4.2).
+Six fictional policies (~1350 words, 31 numbered sections, citations as "file §n.m"). Built in on purpose: condition-dependent rules
+(probation, contract type), gaps that no policy covers (parental leave, relocation, stock options, salary), and multi-section answers.
+Public HR Q&A datasets were checked and not used (see docs/scope.md). Seeded database: 10 employees, balances, blackout periods and
+two approved requests used for overlap tests.
 
 ## 3. Data preparation
-(TODO: section-level chunking, eval sets)
+Policies split into section chunks with item ids. Evaluation sets built by hand (frozen; changes only for domain reasons):
+router 60 + hard 25, collector 22 + dev 18, retrieval 40, QA 45 (29 covered, 5 of them partial, 16 not covered), leave 20, dialogues 8,
+verifier 26, rewriter 12. Test sets are not edited to fit results; prompt fixes are checked on dev/hard sets.
+
+## 4. Modeling
+Router -> (rewriter) -> collector -> hybrid retriever (BM25 + multilingual MiniLM, RRF) -> sufficiency (full/partial/none) -> answerer
+-> verifier (code + LLM, one retry) for policy questions; collector -> leave agent -> tools -> rules.py -> SQLite for leave.
+Baseline: vanilla RAG (top-3 chunks, one call). One model for every number: ling-3.2-flash (free, OpenRouter), reasoning off.
+
+## 5. Evaluation (three rounds; numbers in docs/results_v1_v2.md and docs/results_final.md)
+Round 1: first numbers. Findings: hybrid hurt Ukrainian queries (BM25 noise on Cyrillic); multi-turn failures seen in manual UI
+testing (bare replies re-routed, English questions for Ukrainian users, lost leave type, generic refusal to "I am HR").
+Round 2: contextual router, collector-first follow-ups, language-aware questions, BM25 skipped without overlap, partial coverage,
+rewriter, study leave removed (the company has no parental leave either). Findings: over-clarification, verifier flagging "the policies
+do not say X", wrong year in dates, employee context replacing the asked rule.
+Round 3 (final): verifier ignores absence statements and context-based claims, answerer rules, year normalisation, follow-ups never get
+a clarifying question. Everything with an LLM was rerun with one configuration. Remaining errors are documented, not hidden:
+c02 ("next Friday" convention), h20/h22 (ambiguous gold labels), h06 (short reply to our question, covered in the pipeline), n14
+(clarification instead of referral), judge limits (same model, employee-context facts counted as unsupported).
+
+## 6. Deployment
+Streamlit app (app/streamlit_app.py) with employee switch, sources, step trace and a database view; setup and run commands in README.md;
+every model call is logged to logs/llm_calls.jsonl (tracing). Deliverables: code, docs/diagram.png, docs/scope.md, evaluation results,
+demo video.
 
 ## Decisions log
-- Day 1: state machine instead of LangGraph; SQLite; employee id bound to session; rules in code, not in prompts.
-- Day 2: router has 3 labels; "policy_question" covers ANY HR topic (even without a policy) so referral is decided later by the
-  sufficiency check; "out_of_scope" = not HR at all. Router falls back to out_of_scope on bad output (never reaches the DB).
-- Day 2: collector does not ask for facts the session already knows (contract type, start date); leave follow-up questions are
-  templated by code, policy clarification questions come from the LLM.
-- Day 2: eval sets frozen in data/eval/ (router: 60, collector: 22). Evals not yet run (need API key).
-- Day 3 (modeling): hybrid retrieval (BM25 + multilingual MiniLM, RRF). BM25 alone: hit@3 0.90 on 40 questions but only 0.2 on the
-  5 Ukrainian ones -> motivates dense/hybrid. Light plural stripping added after a failure ("employment certificate" matched the
-  sick-leave section, because "certificates" != "certificate").
-- Day 3: sufficiency check before answering (referral when policy does not support an answer); verifier after answering with one
-  regeneration, then referral. Leave flow is an LLM tool-calling agent; employee id is bound to the session, approval is code.
-- Day 3: collector fixes after eval v1 (c02 date convention, c17 generic-term clarification); verified on a separate dev set
-  (data/eval/collector_dev.jsonl), not on the failing test cases.
-- Offline check: leave rules vs 20 hand-written scenarios 20/20 (deterministic code, so this is a correctness check, not a model score).
-- Day 3 evaluation round 1 (model: ling free, reasoning default): router 60/60, retrieval hit@3 bm25 .90 / dense .925 / hybrid .95
-  (Ukrainian n=5: dense 1.0, hybrid 0.6), leave e2e 20/20, QA(full, n=12) referral F1 1.0, unsupported 0.125.
-  Findings: (1) hybrid hurt Ukrainian queries because all-zero BM25 scores injected arbitrary ranks -> skip BM25 when no overlap;
-  (2) manual testing showed multi-turn failures: a bare reply ("annual") was routed as a new policy question, the
-  clarifying questions were English for Ukrainian users, the leave type was not remembered ("then 24-30"), and an
-  "I'm HR" challenge got a generic refusal -> context-aware router, collector-first follow-ups, language-aware templates,
-  one-turn leave-type carry-over, policy 4.5 extended to HR staff.
-  (3) router/leave sets saturated at 1.0 -> added router_hard (22, with context) and dialogues (8) to make scores discriminative.
-- Next iteration: rerun ALL LLM evals with the final config (model + LLM_REASONING=off) so every reported number uses one setup.
-- Day 3 evaluation round 2 (model ling free, reasoning=off): router 60/60 (saturated) and router_hard 20/22 (both misses are ambiguous gold
-  labels: "recommend a doctor" vs health insurance; authority claim + vague booking); collector dev 13/13; retrieval hybrid hit@3 1.00,
-  MRR .946 (uk = dense after the BM25 zero-score fix); leave e2e 20/20; verifier acc .962 (recall 1.0, one false reject);
-  sufficiency acc .976 (q14: partial coverage mislabelled as full); dialogues success .75; QA full (n=12) correctness .75.
-  Findings from the UI transcripts: (1) over-clarification of policy questions ("company benefits", "money for sports", "I need a laptop");
-  (2) a multi-part question with one uncovered part was refused entirely; (3) follow-ups like "but I am HR, you can check it"
-  lost context; (4) the model did not map "заяву на відпустку" to annual leave.
-  Changes: collector asks only for topic-less questions (few-shot), UK/EN synonyms for leave types; sufficiency returns
-  full/partial/none and partial answers get an HR note; rewriter component for short follow-ups.
-- Domain decision: study leave removed (the company has no parental leave either, so keeping study leave was inconsistent). Eval items about
-  study leave were rewritten to unpaid/annual/sick equivalents; questions about parental leave remain HR-referral tests.
-- The UI now uses the real current date. Seeds (blackouts, holiday list) cover Nov 2026 - mid 2027 and must be refreshed afterwards.
-- Day 3 round 3 (new version without study leave): see docs/results_v1_v2.md. Decision: keep this version as final. Remaining errors are
-  documented, not hidden: c02 (convention), h20/h22 (ambiguous labels), l08 regression (fixed by router rule + h24), q05/q36/n14 (QA; traces now saved
-  in failures), judge limitation (self-judging, baseline context).
-- Changes after round 3: dates asked in one question, answerer no longer says "excerpts", collector rule for qualified terms, QA judge receives
-  employee context and what the baseline saw.
+- State machine instead of an agent framework; SQLite; the LLM reaches the database only through tools; the employee id comes from the
+  session; approve/decline is deterministic code.
+- Router label "policy_question" covers any HR topic, so the referral decision belongs to the sufficiency check.
+- Study leave removed to keep the domain consistent. Eval items that mentioned it were rewritten, not tuned.
+- LLM_REASONING=off for all numbers (JSON tasks, fewer rate-limit problems).
+- The UI shows the real current date; evals use a fixed date (2026-11-16) for reproducibility.
