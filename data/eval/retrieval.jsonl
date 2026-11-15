@@ -1,0 +1,40 @@
+{"id": "q01", "text": "How many annual leave days do I get per year?", "gold": ["leave.md#2"]}
+{"id": "q02", "text": "Can I take annual leave during probation?", "gold": ["leave.md#3"]}
+{"id": "q03", "text": "How much notice do I need for unpaid leave?", "gold": ["leave.md#4"]}
+{"id": "q04", "text": "Do I need a medical certificate if I'm sick for two days?", "gold": ["sick_leave.md#3"]}
+{"id": "q05", "text": "What is the learning budget per year?", "gold": ["benefits.md#3"]}
+{"id": "q06", "text": "Does the company pay for my health insurance?", "gold": ["benefits.md#2"]}
+{"id": "q07", "text": "Can I work from another country for two weeks?", "gold": ["remote_work.md#3"]}
+{"id": "q08", "text": "How long does probation last?", "gold": ["onboarding.md#3", "leave.md#3"]}
+{"id": "q09", "text": "How do I request a new laptop?", "gold": ["internal_requests.md#2", "internal_requests.md#1"]}
+{"id": "q10", "text": "When will my expenses be reimbursed?", "gold": ["internal_requests.md#4"]}
+{"id": "q11", "text": "Are contractors entitled to sick leave?", "gold": ["sick_leave.md#1", "leave.md#1"]}
+{"id": "q12", "text": "What happens to my unused vacation days at the end of the year?", "gold": ["leave.md#6"]}
+{"id": "q13", "text": "How many sick days do I get a year?", "gold": ["sick_leave.md#1", "leave.md#2"]}
+{"id": "q14", "text": "Who is my onboarding buddy?", "gold": ["onboarding.md#2"]}
+{"id": "q15", "text": "Is there a maximum number of days in one annual leave request?", "gold": ["leave.md#5"]}
+{"id": "q16", "text": "Does the gym subscription benefit start immediately?", "gold": ["benefits.md#4", "benefits.md#1"]}
+{"id": "q17", "text": "Can I take unpaid leave while on probation?", "gold": ["leave.md#3"]}
+{"id": "q18", "text": "What are the blackout periods for vacation?", "gold": ["leave.md#5"]}
+{"id": "q19", "text": "Who approves production access?", "gold": ["internal_requests.md#3"]}
+{"id": "q20", "text": "How quickly will HR issue an employment certificate?", "gold": ["internal_requests.md#5"]}
+{"id": "q21", "text": "Can I use the learning budget during probation?", "gold": ["onboarding.md#4", "benefits.md#3"]}
+{"id": "q22", "text": "Do I need a VPN when working from a cafe?", "gold": ["remote_work.md#4"]}
+{"id": "q23", "text": "How many days per week do I need to be in the office?", "gold": ["remote_work.md#1"]}
+{"id": "q24", "text": "What if I get sick while on vacation?", "gold": ["sick_leave.md#5"]}
+{"id": "q25", "text": "Is the home office allowance available to everyone?", "gold": ["benefits.md#5"]}
+{"id": "q26", "text": "How soon should I tell my manager I'm sick?", "gold": ["sick_leave.md#2"]}
+{"id": "q27", "text": "Can my manager approve leave outside the rules?", "gold": ["leave.md#4"]}
+{"id": "q28", "text": "What training must I complete when I join?", "gold": ["onboarding.md#2"]}
+{"id": "q29", "text": "How do I cancel approved leave?", "gold": ["leave.md#7"]}
+{"id": "q30", "text": "What review meetings happen during probation?", "gold": ["onboarding.md#3"]}
+{"id": "q31", "text": "How much can I spend on peripherals without department approval?", "gold": ["internal_requests.md#2"]}
+{"id": "q32", "text": "Can my probation be extended?", "gold": ["onboarding.md#3"]}
+{"id": "q33", "text": "Does family health insurance cost extra?", "gold": ["benefits.md#2"]}
+{"id": "q34", "text": "How many days per year can I work remotely from abroad?", "gold": ["remote_work.md#3"]}
+{"id": "q35", "text": "How are working days counted for leave?", "gold": ["leave.md#2", "leave.md#4"]}
+{"id": "q36", "text": "Скільки днів оплачуваної відпустки я маю на рік?", "gold": ["leave.md#2"]}
+{"id": "q37", "text": "Чи потрібна довідка від лікаря, якщо я хворію чотири дні?", "gold": ["sick_leave.md#3"]}
+{"id": "q38", "text": "Який розмір бюджету на навчання?", "gold": ["benefits.md#3"]}
+{"id": "q39", "text": "Чи можу я працювати з-за кордону?", "gold": ["remote_work.md#3"]}
+{"id": "q40", "text": "Коли мені відшкодують витрати?", "gold": ["internal_requests.md#4"]}

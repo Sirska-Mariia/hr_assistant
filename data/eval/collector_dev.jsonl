@@ -1,0 +1,18 @@
+{"id": "d01", "text": "Day off next Thursday", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": null, "start_date": "2026-11-19", "end_date": "2026-11-19"}}
+{"id": "d02", "text": "I'll be sick this Wednesday", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": "sick", "start_date": "2026-11-18", "end_date": "2026-11-18"}}
+{"id": "d03", "text": "Vacation from 21 December to 23 December", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": "annual", "start_date": "2026-12-21", "end_date": "2026-12-23"}}
+{"id": "d04", "text": "Unpaid leave on 10 December", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": "unpaid", "start_date": "2026-12-10", "end_date": "2026-12-10"}}
+{"id": "d05", "text": "Unpaid leave from next Monday to Wednesday", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": "unpaid", "start_date": "2026-11-23", "end_date": "2026-11-25"}}
+{"id": "d06", "text": "I need leave", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": null, "start_date": null, "end_date": null}}
+{"id": "d07", "text": "Annual leave next week Tuesday to Thursday", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "book", "leave_type": "annual", "start_date": "2026-11-24", "end_date": "2026-11-26"}}
+{"id": "d08", "text": "How many vacation days do I have?", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "balance", "leave_type": "annual", "start_date": null, "end_date": null}}
+{"id": "d09", "text": "What happened with my leave request?", "today": "2026-11-16", "intent": "leave_request", "gold": {"action": "status", "leave_type": null, "start_date": null, "end_date": null}}
+{"id": "d10", "text": "What is the limit?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}
+{"id": "d11", "text": "How many sick days are there per year?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d12", "text": "Is it allowed?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}
+{"id": "d13", "text": "How many office days per week do I need?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d14", "text": "Tell me about company benefits", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d15", "text": "Can I receive money for sports?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d16", "text": "I need a laptop", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d17", "text": "How to request a laptop?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "d18", "text": "Tell me about company benefits and values", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}

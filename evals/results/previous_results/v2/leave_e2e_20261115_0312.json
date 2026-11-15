@@ -1,0 +1,12 @@
+{
+  "component": "leave_e2e",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 20,
+    "decision_accuracy": 1.0,
+    "argument_fidelity": 1.0,
+    "exactly_one_write": 1.0,
+    "no_unneeded_clarification": 1.0
+  },
+  "failures": []
+}

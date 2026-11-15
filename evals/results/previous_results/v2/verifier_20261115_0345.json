@@ -1,0 +1,24 @@
+{
+  "component": "verifier",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 26,
+    "accuracy": 0.962,
+    "unsupported_precision": 0.929,
+    "unsupported_recall": 1.0,
+    "unsupported_f1": 0.963,
+    "false_reject_rate": 0.077
+  },
+  "failures": [
+    {
+      "id": "v11",
+      "answer": "Expenses are reimbursed within 30 days of submitting receipts.",
+      "gold_supported": true,
+      "verifier": false,
+      "claims": [
+        "Expenses are reimbursed within 30 days of submitting receipts."
+      ],
+      "reason": ""
+    }
+  ]
+}

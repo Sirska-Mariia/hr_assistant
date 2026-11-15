@@ -1,0 +1,178 @@
+{
+  "component": "qa_no_sufficiency",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 0.667,
+      "recall": 0.75,
+      "f1": 0.706
+    },
+    "answerable": {
+      "correctness": 0.759,
+      "citation_hit": 0.793,
+      "unsupported_rate": 0.0,
+      "wrongly_referred": 0.207
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.062
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 0.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q14",
+      "text": "Who is my onboarding buddy?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about onboarding, an HR policy topic.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['onboarding.md#2', 'onboarding.md#4', 'onboarding.md#5', 'onboarding.md#3']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['they do not specify who your particular buddy is', 'Please check with your manager or HR to get the name of your assigned buddy'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['The policies do not specify who your particular buddy is; please check with your manager or HR to get the name of your assigned buddy.']}"
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "Can I use the learning budget during probation?",
+      "answer": "Since your probation is finished, the standard learning budget of 800 USD per calendar year for courses, books and conferences now applies to you. Expenses must be approved by your manager before purchase and submitted with receipts within 30 days. Unused budget does not carry over.",
+      "fact_coverage": 0.0,
+      "unsupported_claims": 0
+    },
+    {
+      "id": "q29",
+      "text": "How do I cancel approved leave?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asks about HR process for cancelling approved leave.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#7', 'leave.md#6', 'leave.md#4', 'sick_leave.md#5']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not provide a self-service cancellation path; HR handles the cancellation for you.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['HR will process the cancellation for you', 'This is the only cancellation method specified in our HR policies']}"
+      ]
+    },
+    {
+      "id": "q41",
+      "text": "Do unused sick leave days carry over to next year?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about sick leave carryover policy rules.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#6', 'sick_leave.md#4', 'sick_leave.md#1', 'leave.md#2']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Unused sick leave days do not carry over to the next year', 'Any unused sick leave expires at the end of the calendar year'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['This rule applies to all leave types except annual leave, which has a limited carryover provision.']}"
+      ]
+    },
+    {
+      "id": "n04",
+      "text": "Does the company offer stock options?",
+      "kind": "answer",
+      "answer": "Our HR policies do not mention stock options or any equity-based compensation. The listed benefits cover only health insurance and family coverage, so I cannot confirm that stock options are offered.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company benefits and stock options policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#1', 'internal_requests.md#3', 'remote_work.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "clarify",
+      "answer": "Which notice period do you mean — for resignation, termination, or another topic?",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company resignation notice period policy.'}",
+        "collector {'needs_clarification': True}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n15",
+      "text": "Does the company offer a pension plan?",
+      "kind": "answer",
+      "answer": "Our HR policies do not mention a pension plan; the listed benefits cover private health insurance and family coverage options, learning support, and various types of leave. If you need confirmation on",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company benefits, specifically pension plan.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'benefits.md#3', 'leave.md#2', 'sick_leave.md#3']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['the listed benefits cover ... a learning budget', 'I can help you request confirmation from HR'], 'reason': ''}",
+        "verifier_retry {'supported': True, 'unsupported': []}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n16",
+      "text": "Does health insurance cover dental treatment?",
+      "kind": "answer",
+      "answer": "Our HR policies confirm that the company pays 100% of the basic private health insurance plan for you as a full-time employee, with coverage starting after your probation period. However, our HR polic",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company health insurance benefit coverage for dental treatment'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#4', 'benefits.md#1', 'benefits.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": true,
+      "refers_to_hr": false
+    },
+    {
+      "id": "p01",
+      "text": "What health insurance do I get and what is the dress code?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about health insurance benefits and company dress code policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#4', 'leave.md#6', 'leave.md#3']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Since your probation is finished, your health insurance has started.', 'Our HR policies do not contain any information about a dress code.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['since your probation is finished, your health insurance has started', 'Our HR policies do not contain any information about a dress code']}"
+      ]
+    },
+    {
+      "id": "p02",
+      "text": "How many sick days do I get per year and can I take maternity leave?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about sick day allowance and maternity leave policy'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#2', 'sick_leave.md#1', 'leave.md#6', 'sick_leave.md#5']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not contain any provisions regarding maternity leave, so I cannot confirm eligibility based on the available information.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not contain any provisions regarding maternity leave, so I cannot confirm eligibility based on the available information.']}"
+      ]
+    },
+    {
+      "id": "p04",
+      "text": "How long is probation and what salary raise follows it?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about probation duration and salary raise policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#3', 'leave.md#4', 'benefits.md#3', 'onboarding.md#4']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not specify any salary raise following probation.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not state any salary raise following probation, so I cannot confirm one.']}"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "component": "collector",
+  "model": "inclusionai/ling-3.2-flash:free",
+  "metrics": {
+    "leave": {
+      "n": 14,
+      "slot_accuracy": {
+        "leave_type": 1.0,
+        "start_date": 0.929,
+        "end_date": 0.929
+      },
+      "all_slots_correct": 0.929,
+      "missing_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "policy_clarification": {
+      "n": 8,
+      "accuracy": 0.875,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.857
+    }
+  },
+  "failures": [
+    {
+      "id": "c02",
+      "text": "I need a day off next Friday",
+      "expected": {
+        "leave_type": null,
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-20"
+      },
+      "actual": {
+        "leave_type": null,
+        "start_date": "2026-11-27",
+        "end_date": "2026-11-27"
+      }
+    },
+    {
+      "id": "c17",
+      "text": "What is the notice period?",
+      "expected": true,
+      "actual": false,
+      "question": null
+    }
+  ]
+}

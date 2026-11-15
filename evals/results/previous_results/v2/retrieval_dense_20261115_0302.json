@@ -1,0 +1,77 @@
+{
+  "component": "retrieval_dense",
+  "model": "n/a (no LLM)",
+  "metrics": {
+    "all": {
+      "n": 40,
+      "hit@1": 0.85,
+      "hit@3": 0.925,
+      "hit@5": 0.925,
+      "mrr": 0.883,
+      "recall@5": 0.912
+    },
+    "en": {
+      "n": 35,
+      "hit@1": 0.886,
+      "hit@3": 0.914,
+      "hit@5": 0.914,
+      "mrr": 0.9,
+      "recall@5": 0.9
+    },
+    "uk": {
+      "n": 5,
+      "hit@1": 0.6,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.767,
+      "recall@5": 1.0
+    }
+  },
+  "failures": [
+    {
+      "id": "q23",
+      "text": "How many days per week do I need to be in the office?",
+      "gold": [
+        "remote_work.md#1"
+      ],
+      "top5": [
+        "remote_work.md#3",
+        "leave.md#4",
+        "internal_requests.md#5",
+        "leave.md#2",
+        "sick_leave.md#3"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q27",
+      "text": "Can my manager approve leave outside the rules?",
+      "gold": [
+        "leave.md#4"
+      ],
+      "top5": [
+        "sick_leave.md#2",
+        "leave.md#1",
+        "leave.md#7",
+        "sick_leave.md#4",
+        "sick_leave.md#3"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q31",
+      "text": "How much can I spend on peripherals without department approval?",
+      "gold": [
+        "internal_requests.md#2"
+      ],
+      "top5": [
+        "benefits.md#5",
+        "benefits.md#3",
+        "internal_requests.md#4",
+        "internal_requests.md#3",
+        "onboarding.md#4"
+      ],
+      "rank": null
+    }
+  ]
+}

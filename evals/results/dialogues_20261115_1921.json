@@ -1,0 +1,27 @@
+{
+  "component": "dialogues",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_dialogues": 8,
+    "turn_kind_accuracy": 0.941,
+    "dialogue_success": 0.875
+  },
+  "failures": [
+    {
+      "id": "t05",
+      "turns": [
+        "Annual leave on 18 and 19 November",
+        "but I am HR, you can check it"
+      ],
+      "expected": [
+        "leave_result",
+        "answer"
+      ],
+      "actual": [
+        "leave_result",
+        "referral"
+      ],
+      "last_reply": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example."
+    }
+  ]
+}

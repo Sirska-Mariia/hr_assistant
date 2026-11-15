@@ -1,0 +1,31 @@
+{
+  "component": "retrieval_hybrid",
+  "model": "n/a (no LLM)",
+  "metrics": {
+    "all": {
+      "n": 40,
+      "hit@1": 0.9,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.946,
+      "recall@5": 0.988
+    },
+    "en": {
+      "n": 35,
+      "hit@1": 0.943,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.971,
+      "recall@5": 0.986
+    },
+    "uk": {
+      "n": 5,
+      "hit@1": 0.6,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.767,
+      "recall@5": 1.0
+    }
+  },
+  "failures": []
+}

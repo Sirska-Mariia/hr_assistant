@@ -1,0 +1,104 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 0.762,
+      "recall": 1.0,
+      "f1": 0.865
+    },
+    "answerable": {
+      "correctness": 0.828,
+      "citation_hit": 0.828,
+      "unsupported_rate": 0.0,
+      "wrongly_referred": 0.172
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 0.2
+    },
+    "clarifications": 0
+  },
+  "failures": [
+    {
+      "id": "q14",
+      "text": "Who is my onboarding buddy?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about onboarding, an HR policy topic.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['onboarding.md#2', 'onboarding.md#4', 'onboarding.md#5', 'onboarding.md#3']}",
+        "sufficiency {'coverage': 'partial', 'reason': 'Policy confirms a buddy is assigned but does not name the person.'}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['The HR policies do not specify who your individual buddy is.', 'You should check with your manager or HR to learn your assigned buddy.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not state the name of your individual buddy.']}"
+      ]
+    },
+    {
+      "id": "q29",
+      "text": "How do I cancel approved leave?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about the process to cancel approved leave.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#7', 'leave.md#6', 'leave.md#4', 'sick_leave.md#5']}",
+        "sufficiency {'coverage': 'full', 'reason': 'Excerpts state approved leave can be cancelled before the first day by contacting HR.'}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not provide a self-service cancellation path; HR handles the cancellation for you.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not describe any other cancellation method.']}"
+      ]
+    },
+    {
+      "id": "p01",
+      "text": "What health insurance do I get and what is the dress code?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about health insurance benefits and company dress code policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#4', 'leave.md#6', 'leave.md#3']}",
+        "sufficiency {'coverage': 'partial', 'reason': 'Health insurance covered; dress code not mentioned in excerpts.'}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not contain any information about a dress code.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['since your probation is finished, this applies to you', 'Our HR policies do not contain any information about a dress code']}"
+      ]
+    },
+    {
+      "id": "p02",
+      "text": "How many sick days do I get per year and can I take maternity leave?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about sick day allowance and maternity leave policy'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#2', 'sick_leave.md#1', 'leave.md#6', 'sick_leave.md#5']}",
+        "sufficiency {'coverage': 'partial', 'reason': 'Sick days covered; maternity leave not mentioned in excerpts.'}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not contain any provisions regarding maternity leave, so I cannot confirm whether you are eligible for it.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not address maternity leave, so I cannot confirm your eligibility for it.']}"
+      ]
+    },
+    {
+      "id": "p04",
+      "text": "How long is probation and what salary raise follows it?",
+      "kind": "referral",
+      "answer": "I couldn't find this in our HR policies, so I can't answer it reliably. Please contact HR at hr@nordlight.example.",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about probation length and salary raise policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#3', 'leave.md#4', 'benefits.md#3', 'onboarding.md#4']}",
+        "sufficiency {'coverage': 'partial', 'reason': 'Probation length is given, but no salary raise information is provided.'}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': ['Our HR policies do not specify any salary raise following probation.'], 'reason': ''}",
+        "verifier_retry {'supported': False, 'unsupported': ['Our HR policies do not specify any salary raise following probation.']}"
+      ]
+    }
+  ]
+}

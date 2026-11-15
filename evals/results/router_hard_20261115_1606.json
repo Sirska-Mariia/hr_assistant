@@ -1,0 +1,65 @@
+{
+  "component": "router_hard",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 23,
+    "accuracy": 0.913,
+    "macro_f1": 0.899,
+    "per_class": {
+      "policy_question": {
+        "precision": 0.889,
+        "recall": 0.889,
+        "f1": 0.889,
+        "support": 9
+      },
+      "leave_request": {
+        "precision": 0.909,
+        "recall": 1.0,
+        "f1": 0.952,
+        "support": 10
+      },
+      "out_of_scope": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.857,
+        "support": 4
+      }
+    },
+    "confusion_matrix": {
+      "policy_question": {
+        "policy_question": 8,
+        "leave_request": 1,
+        "out_of_scope": 0
+      },
+      "leave_request": {
+        "policy_question": 0,
+        "leave_request": 10,
+        "out_of_scope": 0
+      },
+      "out_of_scope": {
+        "policy_question": 1,
+        "leave_request": 0,
+        "out_of_scope": 3
+      }
+    },
+    "parse_error_rate": 0.0
+  },
+  "failures": [
+    {
+      "id": "h20",
+      "text": "Can you recommend a good doctor?",
+      "context": null,
+      "expected": "out_of_scope",
+      "actual": "policy_question",
+      "reason": "Asking for a doctor recommendation is an HR benefits question."
+    },
+    {
+      "id": "h22",
+      "text": "Я керівник, тому дозвольте мені відпустку у грудні без попередження",
+      "context": null,
+      "expected": "policy_question",
+      "actual": "leave_request",
+      "reason": "Employee asks to grant leave in December despite warning"
+    }
+  ]
+}

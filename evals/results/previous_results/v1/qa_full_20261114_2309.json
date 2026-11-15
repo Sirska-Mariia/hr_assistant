@@ -1,0 +1,32 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free",
+  "metrics": {
+    "n_answerable": 8,
+    "n_unanswerable": 4,
+    "referral": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "answerable": {
+      "correctness": 1.0,
+      "citation_hit": 1.0,
+      "unsupported_rate": 0.125,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "clarifications": 0
+  },
+  "failures": [
+    {
+      "id": "q07",
+      "text": "Can I work from another country for two weeks?",
+      "answer": "Yes — two weeks (10 working days) is within the limit of 20 working days per calendar year for working from another country. You must submit the request at least 10 working days in advance and get it approved by your manager and Security. Since your probation is finished, the restriction on working ",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    }
+  ]
+}

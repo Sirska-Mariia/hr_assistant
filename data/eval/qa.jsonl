@@ -1,0 +1,45 @@
+{"id": "q01", "text": "How many annual leave days do I get per year?", "answerable": true, "gold": ["leave.md#2"], "key_facts": ["20 working days per year"]}
+{"id": "q02", "text": "Can I take annual leave during probation?", "answerable": true, "gold": ["leave.md#3"], "key_facts": ["annual leave cannot be taken during probation"]}
+{"id": "q03", "text": "How much notice do I need for unpaid leave?", "answerable": true, "gold": ["leave.md#4"], "key_facts": ["at least 5 working days"]}
+{"id": "q04", "text": "Do I need a medical certificate if I'm sick for two days?", "answerable": true, "gold": ["sick_leave.md#3"], "key_facts": ["no certificate is needed for up to 3 consecutive working days"]}
+{"id": "q05", "text": "What is the learning budget per year?", "answerable": true, "gold": ["benefits.md#3"], "key_facts": ["800 USD per year"]}
+{"id": "q06", "text": "Does the company pay for my health insurance?", "answerable": true, "gold": ["benefits.md#2"], "key_facts": ["the company pays 100% of the basic plan"]}
+{"id": "q07", "text": "Can I work from another country for two weeks?", "answerable": true, "gold": ["remote_work.md#3"], "key_facts": ["up to 20 working days per year", "request at least 10 working days in advance"]}
+{"id": "q08", "text": "How long does probation last?", "answerable": true, "gold": ["onboarding.md#3", "leave.md#3"], "key_facts": ["probation lasts 3 months"]}
+{"id": "q09", "text": "How do I request a new laptop?", "answerable": true, "gold": ["internal_requests.md#2", "internal_requests.md#1"], "key_facts": ["submit through the ticket portal"]}
+{"id": "q10", "text": "When will my expenses be reimbursed?", "answerable": true, "gold": ["internal_requests.md#4"], "key_facts": ["within 30 days of submitting receipts"]}
+{"id": "q11", "text": "Are contractors entitled to sick leave?", "answerable": true, "gold": ["sick_leave.md#1", "leave.md#1"], "key_facts": ["contractors are not entitled to paid sick leave"]}
+{"id": "q12", "text": "What happens to my unused vacation days at the end of the year?", "answerable": true, "gold": ["leave.md#6"], "key_facts": ["up to 5 days carry over until 31 March"]}
+{"id": "q13", "text": "How many sick days do I get a year?", "answerable": true, "gold": ["sick_leave.md#1", "leave.md#2"], "key_facts": ["10 paid sick days per year"]}
+{"id": "q14", "text": "Who is my onboarding buddy?", "answerable": true, "gold": ["onboarding.md#2"], "key_facts": ["every new employee gets a buddy for the first 3 months"], "partial": true}
+{"id": "q15", "text": "Is there a maximum number of days in one annual leave request?", "answerable": true, "gold": ["leave.md#5"], "key_facts": ["maximum 10 working days per request"]}
+{"id": "q17", "text": "Can I take unpaid leave while on probation?", "answerable": true, "gold": ["leave.md#3"], "key_facts": ["unpaid leave remains available during probation"]}
+{"id": "q18", "text": "What are the blackout periods for vacation?", "answerable": true, "gold": ["leave.md#5"], "key_facts": ["last 7 days of March, June and September", "21-31 December"]}
+{"id": "q21", "text": "Can I use the learning budget during probation?", "answerable": true, "gold": ["onboarding.md#4", "benefits.md#3"], "key_facts": ["up to 200 USD during probation", "only for courses marked mandatory"]}
+{"id": "q22", "text": "Do I need a VPN when working from a cafe?", "answerable": true, "gold": ["remote_work.md#4"], "key_facts": ["use the company VPN"]}
+{"id": "q23", "text": "How many days per week do I need to be in the office?", "answerable": true, "gold": ["remote_work.md#1"], "key_facts": ["2 days per week in the office"]}
+{"id": "q24", "text": "What if I get sick while on vacation?", "answerable": true, "gold": ["sick_leave.md#5"], "key_facts": ["sick days can be re-booked as sick leave with a certificate"]}
+{"id": "q25", "text": "Is the home office allowance available to everyone?", "answerable": true, "gold": ["benefits.md#5"], "key_facts": ["300 USD one-time", "only if remote at least 3 days per week"]}
+{"id": "q29", "text": "How do I cancel approved leave?", "answerable": true, "gold": ["leave.md#7"], "key_facts": ["contact HR before the first day"]}
+{"id": "q36", "text": "Скільки днів оплачуваної відпустки я маю на рік?", "answerable": true, "gold": ["leave.md#2"], "key_facts": ["20 working days"]}
+{"id": "q41", "text": "Do unused sick leave days carry over to next year?", "answerable": true, "gold": ["leave.md#6"], "key_facts": ["sick leave does not carry over"]}
+{"id": "n01", "text": "Is there a parental leave policy?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n02", "text": "How much is my salary?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n03", "text": "Can I get a raise after probation?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n04", "text": "Does the company offer stock options?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n05", "text": "I'm being harassed by a colleague, what should I do?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n06", "text": "Does the company pay for relocation to another city?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n07", "text": "Can I take a sabbatical year?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n08", "text": "Can I bring my dog to the office?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n09", "text": "What is the dress code?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n10", "text": "What is the maternity leave duration?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n11", "text": "Will the company sponsor my visa?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n12", "text": "How do I report a conflict with my manager?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n13", "text": "Can I get a loan from the company?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n14", "text": "How long is the notice period if I resign?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n15", "text": "Does the company offer a pension plan?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "n16", "text": "Does health insurance cover dental treatment?", "answerable": false, "gold": [], "key_facts": []}
+{"id": "p01", "text": "What health insurance do I get and what is the dress code?", "answerable": true, "partial": true, "gold": ["benefits.md#2"], "key_facts": ["the company pays 100% of the basic private health insurance"]}
+{"id": "p02", "text": "How many sick days do I get per year and can I take maternity leave?", "answerable": true, "partial": true, "gold": ["sick_leave.md#1"], "key_facts": ["10 paid sick days per year"]}
+{"id": "p03", "text": "What is the learning budget and do you offer stock options?", "answerable": true, "partial": true, "gold": ["benefits.md#3"], "key_facts": ["800 USD per year"]}
+{"id": "p04", "text": "How long is probation and what salary raise follows it?", "answerable": true, "partial": true, "gold": ["onboarding.md#3"], "key_facts": ["probation lasts 3 months"]}

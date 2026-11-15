@@ -1,0 +1,62 @@
+{
+  "component": "retrieval_hybrid",
+  "model": "n/a (no LLM)",
+  "metrics": {
+    "all": {
+      "n": 40,
+      "hit@1": 0.875,
+      "hit@3": 0.95,
+      "hit@5": 0.95,
+      "mrr": 0.908,
+      "recall@5": 0.938
+    },
+    "en": {
+      "n": 35,
+      "hit@1": 0.943,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.971,
+      "recall@5": 0.986
+    },
+    "uk": {
+      "n": 5,
+      "hit@1": 0.4,
+      "hit@3": 0.6,
+      "hit@5": 0.6,
+      "mrr": 0.467,
+      "recall@5": 0.6
+    }
+  },
+  "failures": [
+    {
+      "id": "q37",
+      "text": "Чи потрібна довідка від лікаря, якщо я хворію чотири дні?",
+      "gold": [
+        "sick_leave.md#3"
+      ],
+      "top5": [
+        "leave.md#4",
+        "benefits.md#4",
+        "leave.md#2",
+        "leave.md#6",
+        "leave.md#5"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q39",
+      "text": "Чи можу я працювати з-за кордону?",
+      "gold": [
+        "remote_work.md#3"
+      ],
+      "top5": [
+        "benefits.md#5",
+        "internal_requests.md#5",
+        "benefits.md#1",
+        "leave.md#1",
+        "leave.md#4"
+      ],
+      "rank": null
+    }
+  ]
+}

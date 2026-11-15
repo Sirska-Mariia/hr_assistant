@@ -1,0 +1,10 @@
+{
+  "component": "dialogues",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_dialogues": 8,
+    "turn_kind_accuracy": 1.0,
+    "dialogue_success": 1.0
+  },
+  "failures": []
+}

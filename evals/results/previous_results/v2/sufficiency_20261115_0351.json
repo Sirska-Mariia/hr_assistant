@@ -1,0 +1,20 @@
+{
+  "component": "sufficiency",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 41,
+    "accuracy": 0.976,
+    "uncovered_precision": 0.941,
+    "uncovered_recall": 1.0,
+    "uncovered_f1": 0.97,
+    "wrongly_insufficient_rate": 0.04
+  },
+  "failures": [
+    {
+      "id": "q14",
+      "text": "Who is my onboarding buddy?",
+      "gold_answerable": true,
+      "reason": "Excerpts state a buddy is assigned but do not name the specific person."
+    }
+  ]
+}

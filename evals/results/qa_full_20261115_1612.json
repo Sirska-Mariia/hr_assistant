@@ -1,0 +1,41 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 8,
+    "n_unanswerable": 4,
+    "referral": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.889
+    },
+    "answerable": {
+      "correctness": 0.875,
+      "citation_hit": 0.875,
+      "unsupported_rate": 0.143,
+      "wrongly_referred": 0.125
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 0,
+      "flagged_as_partial": null
+    },
+    "clarifications": 0
+  },
+  "failures": [
+    {
+      "id": "q05",
+      "text": "What is the learning budget per year?",
+      "kind": "referral"
+    },
+    {
+      "id": "q06",
+      "text": "Does the company pay for my health insurance?",
+      "answer": "Yes, the company pays 100% of the basic private health insurance plan for you as the employee. Family coverage is available only at your own cost through the insurer. Since your probation is finished, your health insurance has started.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    }
+  ]
+}

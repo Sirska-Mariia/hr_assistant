@@ -1,0 +1,54 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 0.882,
+      "recall": 0.938,
+      "f1": 0.909
+    },
+    "answerable": {
+      "correctness": 0.931,
+      "citation_hit": 0.897,
+      "unsupported_rate": 0.037,
+      "wrongly_referred": 0.069
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 1.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q05",
+      "text": "What is the learning budget per year?",
+      "kind": "referral"
+    },
+    {
+      "id": "q06",
+      "text": "Does the company pay for my health insurance?",
+      "answer": "Yes, the company pays 100% of the basic private health insurance plan for you as the employee. Family coverage is available only at your own cost through the insurer. Since your probation is finished, your health insurance has started.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q36",
+      "text": "Скільки днів оплачуваної відпустки я маю на рік?",
+      "kind": "referral"
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "clarify",
+      "answer": "Which notice period do you mean: for resignation, termination by the company, or something else?",
+      "fabricated": false,
+      "refers_to_hr": false
+    }
+  ]
+}

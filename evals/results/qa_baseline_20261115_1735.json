@@ -1,0 +1,173 @@
+{
+  "component": "qa_baseline",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "answerable": {
+      "correctness": 1.0,
+      "citation_hit": 0.0,
+      "unsupported_rate": 0.0,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 0.0
+    },
+    "clarifications": 0
+  },
+  "failures": [
+    {
+      "id": "n01",
+      "text": "Is there a parental leave policy?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about a parental leave policy. It only covers general leave eligibility, annual leave limits, and sick leave during annual leave. You would need t",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n02",
+      "text": "How much is my salary?",
+      "kind": "answer",
+      "answer": "I don't have information about your specific salary in the provided context. The policies cover health insurance, remote work rules, and a home office allowance, but they do not include any salary det",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n03",
+      "text": "Can I get a raise after probation?",
+      "kind": "answer",
+      "answer": "The provided policies do not contain any information about raises or salary adjustments after probation. The context only covers wellness benefits, health insurance, learning budget during onboarding,",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n04",
+      "text": "Does the company offer stock options?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about stock options. The policies cover health insurance, onboarding, and access requests, but do not mention stock options or equity compensation",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n05",
+      "text": "I'm being harassed by a colleague, what should I do?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about harassment, reporting procedures, or related policies. The documents only cover Remote Work Policy and Sick Leave Policy.\n\nI cannot answer y",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n06",
+      "text": "Does the company pay for relocation to another city?",
+      "kind": "answer",
+      "answer": "The provided policies do not mention relocation benefits or coverage. I can’t confirm whether the company pays for relocation to another city based on this context. Please check with HR or refer to th",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n07",
+      "text": "Can I take a sabbatical year?",
+      "kind": "answer",
+      "answer": "The provided policies do not mention sabbaticals. They only cover annual leave (20 days), sick leave (10 days), and unpaid leave (up to 10 days per calendar year). Since a sabbatical year is not addre",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n08",
+      "text": "Can I bring my dog to the office?",
+      "kind": "answer",
+      "answer": "I don't have any information about a pet policy in the provided context. The documents only cover remote work, leave requests, and leave cancellation rules.\n\nTo get an accurate answer, please check yo",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n09",
+      "text": "What is the dress code?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about a dress code. It only covers the Leave Policy (eligibility and scope) and the Onboarding Policy (pre-start-day logistics). You may need to c",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n10",
+      "text": "What is the maternity leave duration?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about maternity leave or its duration. The policy sections included only cover notice and approval, eligibility, and limits for annual leave, sick",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n11",
+      "text": "Will the company sponsor my visa?",
+      "kind": "answer",
+      "answer": "The provided policies do not mention visa sponsorship. You would need to check with HR or refer to an immigration or relocation policy, which is not included in the context above.",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n12",
+      "text": "How do I report a conflict with my manager?",
+      "kind": "answer",
+      "answer": "The provided policies do not include any procedure for reporting a conflict with a manager. You would need to consult a different policy (such as a Grievance or Code of Conduct policy) or contact HR d",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n13",
+      "text": "Can I get a loan from the company?",
+      "kind": "answer",
+      "answer": "I'm not able to answer that question based on the provided context. The policies available cover remote work, leave cancellation, and internal access requests, but there is no information about employ",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about resignation or the notice period for resigning. The policy sections included only cover notice and approval for leave requests, leave limits",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n15",
+      "text": "Does the company offer a pension plan?",
+      "kind": "answer",
+      "answer": "The provided context does not mention a pension plan, so I can't confirm whether Nordlight Software offers one. The context only covers health insurance, learning budget, and leave policies. You may w",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n16",
+      "text": "Does health insurance cover dental treatment?",
+      "kind": "answer",
+      "answer": "The provided policies do not specify whether the basic private health insurance plan covers dental treatment. You would need to check the details of the specific insurance plan with the insurer or HR ",
+      "steps": [],
+      "fabricated": false,
+      "refers_to_hr": true
+    }
+  ]
+}

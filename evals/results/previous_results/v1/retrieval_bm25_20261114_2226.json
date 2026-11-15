@@ -1,0 +1,92 @@
+{
+  "component": "retrieval_bm25",
+  "model": "n/a (no LLM)",
+  "metrics": {
+    "all": {
+      "n": 40,
+      "hit@1": 0.675,
+      "hit@3": 0.9,
+      "hit@5": 0.9,
+      "mrr": 0.775,
+      "recall@5": 0.9
+    },
+    "en": {
+      "n": 35,
+      "hit@1": 0.771,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.876,
+      "recall@5": 1.0
+    },
+    "uk": {
+      "n": 5,
+      "hit@1": 0.0,
+      "hit@3": 0.2,
+      "hit@5": 0.2,
+      "mrr": 0.067,
+      "recall@5": 0.2
+    }
+  },
+  "failures": [
+    {
+      "id": "q36",
+      "text": "Скільки днів оплачуваної відпустки я маю на рік?",
+      "gold": [
+        "leave.md#2"
+      ],
+      "top5": [
+        "benefits.md#1",
+        "benefits.md#2",
+        "benefits.md#3",
+        "benefits.md#4",
+        "benefits.md#5"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q37",
+      "text": "Чи потрібна довідка від лікаря, якщо я хворію чотири дні?",
+      "gold": [
+        "sick_leave.md#3"
+      ],
+      "top5": [
+        "benefits.md#1",
+        "benefits.md#2",
+        "benefits.md#3",
+        "benefits.md#4",
+        "benefits.md#5"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q39",
+      "text": "Чи можу я працювати з-за кордону?",
+      "gold": [
+        "remote_work.md#3"
+      ],
+      "top5": [
+        "benefits.md#1",
+        "benefits.md#2",
+        "benefits.md#3",
+        "benefits.md#4",
+        "benefits.md#5"
+      ],
+      "rank": null
+    },
+    {
+      "id": "q40",
+      "text": "Коли мені відшкодують витрати?",
+      "gold": [
+        "internal_requests.md#4"
+      ],
+      "top5": [
+        "benefits.md#1",
+        "benefits.md#2",
+        "benefits.md#3",
+        "benefits.md#4",
+        "benefits.md#5"
+      ],
+      "rank": null
+    }
+  ]
+}

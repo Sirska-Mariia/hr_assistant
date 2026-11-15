@@ -1,0 +1,35 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 8,
+    "n_unanswerable": 4,
+    "referral": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.889
+    },
+    "answerable": {
+      "correctness": 0.75,
+      "citation_hit": 0.75,
+      "unsupported_rate": 0.0,
+      "wrongly_referred": 0.125
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q06",
+      "text": "Does the company pay for my health insurance?",
+      "kind": "referral"
+    },
+    {
+      "id": "q07",
+      "text": "Can I work from another country for two weeks?",
+      "kind": "clarify"
+    }
+  ]
+}

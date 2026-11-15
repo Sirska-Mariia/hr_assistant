@@ -1,0 +1,30 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free",
+  "metrics": {
+    "n_answerable": 8,
+    "n_unanswerable": 4,
+    "referral": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "answerable": {
+      "correctness": 0.875,
+      "citation_hit": 0.875,
+      "unsupported_rate": 0.0,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q07",
+      "text": "Can I work from another country for two weeks?",
+      "kind": "clarify"
+    }
+  ]
+}

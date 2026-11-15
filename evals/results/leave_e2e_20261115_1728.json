@@ -1,0 +1,33 @@
+{
+  "component": "leave_e2e",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 20,
+    "decision_accuracy": 0.95,
+    "argument_fidelity": 0.95,
+    "exactly_one_write": 1.0,
+    "no_unneeded_clarification": 1.0
+  },
+  "failures": [
+    {
+      "id": "l12",
+      "message": "Annual leave from 1 December to 16 December.",
+      "kind": "leave_result",
+      "rows": [
+        {
+          "id": 3,
+          "employee_id": 8,
+          "leave_type": "annual",
+          "start_date": "2025-12-01",
+          "end_date": "2025-12-16",
+          "working_days": 12,
+          "status": "declined",
+          "reason_code": "in_the_past",
+          "decision_reason": "Declined: the start date is too far in the past (section 4.1).",
+          "created_at": "2026-11-15T17:26:50"
+        }
+      ],
+      "reply": "Your annual leave request from 2025-12-01 to 2025-12-16 was declined: the start date is too far in the past (section 4.1). Please submit a request with future dates."
+    }
+  ]
+}

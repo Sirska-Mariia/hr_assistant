@@ -1,0 +1,20 @@
+{
+  "component": "leave_e2e",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 20,
+    "decision_accuracy": 0.95,
+    "argument_fidelity": 0.95,
+    "exactly_one_write": 0.95,
+    "no_unneeded_clarification": 1.0
+  },
+  "failures": [
+    {
+      "id": "l08",
+      "message": "I'm sick today.",
+      "kind": "answer",
+      "rows": [],
+      "reply": "As a full-time employee, you are entitled to 10 paid sick days per calendar year, available from your first day of employment. If your absence exceeds 10 working days or involves a planned medical procedure, you must contact HR before making arrangements.\n\nNote: part of your question isn't covered by our HR policies. Please contact HR at hr@nordlight.example for that part."
+    }
+  ]
+}

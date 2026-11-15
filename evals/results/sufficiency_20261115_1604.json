@@ -1,0 +1,13 @@
+{
+  "component": "sufficiency",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n": 45,
+    "accuracy": 1.0,
+    "uncovered_precision": 1.0,
+    "uncovered_recall": 1.0,
+    "uncovered_f1": 1.0,
+    "wrongly_insufficient_rate": 0.0
+  },
+  "failures": []
+}

@@ -1,0 +1,272 @@
+{
+  "component": "qa_no_sufficiency",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 1.0,
+      "recall": 0.188,
+      "f1": 0.316
+    },
+    "answerable": {
+      "correctness": 1.0,
+      "citation_hit": 0.966,
+      "unsupported_rate": 0.241,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.125
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 0.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q08",
+      "text": "How long does probation last?",
+      "answer": "Probation lasts 3 months from your start date, and it can be extended by up to 1 month only with written agreement from HR and you. Since your probation has already finished, this rule no longer applies to you.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q09",
+      "text": "How do I request a new laptop?",
+      "answer": "As a full-time employee who has completed probation, you can request a new laptop by submitting a request through the ticket portal, since requests sent by chat or email are not tracked. Standard laptops are replaced every 3 years, and replacement of broken equipment is handled within 5 working days",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q10",
+      "text": "When will my expenses be reimbursed?",
+      "answer": "Your expenses will be reimbursed within 30 days of submitting receipts in the ticket portal. Since your probation is finished, this timeline applies to you as to any employee.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q12",
+      "text": "What happens to my unused vacation days at the end of the year?",
+      "answer": "At the end of the year, up to 5 of your unused annual leave days carry over until 31 March of the following year, and any days beyond that expire. Since your probation is already finished, the standard carry-over rule applies to you.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q14",
+      "text": "Who is my onboarding buddy?",
+      "answer": "Our HR policies state that every new employee is assigned an onboarding buddy for the first 3 months, but they do not specify who your individual buddy is. Since your probation has already finished, the buddy period has passed.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q29",
+      "text": "How do I cancel approved leave?",
+      "answer": "You can cancel an approved leave request before its first day by contacting HR. This applies to any approved request, including yours since your probation is finished.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "n01",
+      "text": "Is there a parental leave policy?",
+      "kind": "answer",
+      "answer": "Our HR policies do not contain any provisions on parental leave, so I cannot confirm whether such a policy exists. The available policies cover probation, annual leave, sick leave, and unpaid leave on",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company parental leave policy rules'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#3', 'leave.md#5', 'sick_leave.md#5', 'sick_leave.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n02",
+      "text": "How much is my salary?",
+      "kind": "answer",
+      "answer": "Our HR policies do not state salary amounts, so I cannot provide your salary figure from them. The available policies cover benefits such as health insurance, remote work rules, and allowances rather ",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Employee asks about their own pay, an HR policy topic.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'remote_work.md#3', 'benefits.md#5', 'benefits.md#4']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': [], 'reason': 'no citations'}",
+        "verifier_retry {'supported': True, 'unsupported': []}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n03",
+      "text": "Can I get a raise after probation?",
+      "kind": "answer",
+      "answer": "Our HR policies do not contain any rule about salary raises after probation; the listed post-probation items are only the gym reimbursement, health insurance start, and the home-office allowance. Sinc",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about pay raise policy after probation period'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#4', 'onboarding.md#4', 'benefits.md#5', 'leave.md#3']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n04",
+      "text": "Does the company offer stock options?",
+      "kind": "answer",
+      "answer": "Our HR policies do not contain any information about stock options, so I cannot confirm whether the company offers them. The available policy sections cover health insurance, onboarding, system access",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company benefits and stock options policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#1', 'internal_requests.md#3', 'remote_work.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n06",
+      "text": "Does the company pay for relocation to another city?",
+      "kind": "answer",
+      "answer": "Our HR policies do not address relocation to another city or any related payment, so I cannot confirm that the company pays for it. The available policies cover remote work abroad, health insurance, l",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company relocation benefit policy'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['remote_work.md#3', 'benefits.md#2', 'leave.md#1', 'sick_leave.md#3']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n07",
+      "text": "Can I take a sabbatical year?",
+      "kind": "answer",
+      "answer": "Our HR policies do not provide for a sabbatical year; the available leave types are annual leave (20 working days per calendar year), sick leave (10 paid working days), and unpaid leave (up to 10 work",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about sabbatical eligibility and company policy.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['onboarding.md#3', 'leave.md#4', 'leave.md#2', 'leave.md#5']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": true,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n10",
+      "text": "What is the maternity leave duration?",
+      "kind": "answer",
+      "answer": "Our HR policies do not specify a duration for maternity leave; the available rules cover annual, sick, and unpaid leave only. Since no maternity leave provision is listed, I cannot state a duration fr",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company maternity leave policy duration'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['leave.md#4', 'leave.md#3', 'leave.md#5', 'leave.md#6']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n11",
+      "text": "Will the company sponsor my visa?",
+      "kind": "answer",
+      "answer": "Our HR policies do not address visa sponsorship, so I cannot confirm whether the company will sponsor your visa. The available policies cover remote work abroad, onboarding, and leave, but none mentio",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company visa sponsorship policy'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['remote_work.md#3', 'onboarding.md#1', 'leave.md#4', 'leave.md#1']}",
+        "answerer {}",
+        "verifier {'supported': False, 'unsupported': [], 'reason': 'no citations'}",
+        "verifier_retry {'supported': True, 'unsupported': []}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n12",
+      "text": "How do I report a conflict with my manager?",
+      "kind": "answer",
+      "answer": "Our HR policies do not describe a specific procedure for reporting a conflict with a manager. The only general channel stated is that all internal requests are submitted through the ticket portal, and",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company policy for reporting manager conflict'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['onboarding.md#3', 'sick_leave.md#3', 'internal_requests.md#1', 'sick_leave.md#2']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n13",
+      "text": "Can I get a loan from the company?",
+      "kind": "answer",
+      "answer": "Our HR policies do not contain any provision regarding employee loans, so I cannot confirm whether a company loan is available. The policies I can reference cover remote work, leave, and internal syst",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company loan benefit policy'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['remote_work.md#3', 'leave.md#7', 'internal_requests.md#3', 'remote_work.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "clarify",
+      "answer": "Which notice period do you mean — for resignation, termination, or another topic?",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company resignation notice period policy.'}",
+        "collector {'needs_clarification': True}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n15",
+      "text": "Does the company offer a pension plan?",
+      "kind": "answer",
+      "answer": "Our HR policies do not mention a pension plan; the listed benefits cover health insurance, family coverage, and a learning budget, while leave policies cover annual, sick, and unpaid leave. Since no p",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company benefits, specifically pension plan.'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'benefits.md#3', 'leave.md#2', 'sick_leave.md#3']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n16",
+      "text": "Does health insurance cover dental treatment?",
+      "kind": "answer",
+      "answer": "Our HR policies confirm that the company pays 100% of the basic private health insurance plan for you as a full-time employee, and that this benefit started after your probation. However, our HR polic",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company health insurance benefit coverage for dental treatment'}",
+        "collector {'needs_clarification': False}",
+        "retriever {'hits': ['benefits.md#2', 'onboarding.md#4', 'benefits.md#1', 'benefits.md#4']}",
+        "answerer {}",
+        "verifier {'supported': True, 'unsupported': [], 'reason': ''}"
+      ],
+      "fabricated": true,
+      "refers_to_hr": false
+    },
+    {
+      "id": "p01",
+      "text": "What health insurance do I get and what is the dress code?",
+      "answer": "As a full-time employee whose probation is finished, the company pays 100% of your basic private health insurance plan, and family coverage is available at your own cost through the insurer. Our HR policies do not specify a dress code.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    }
+  ]
+}

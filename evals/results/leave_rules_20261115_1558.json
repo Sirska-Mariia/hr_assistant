@@ -1,0 +1,11 @@
+{
+  "component": "leave_rules",
+  "model": "n/a (no LLM)",
+  "metrics": {
+    "n": 20,
+    "decision_accuracy": 1.0,
+    "reason_accuracy": 1.0,
+    "balance_consistency": 1.0
+  },
+  "failures": []
+}

@@ -1,0 +1,76 @@
+{
+  "component": "qa_full",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 1.0,
+      "recall": 0.938,
+      "f1": 0.968
+    },
+    "answerable": {
+      "correctness": 1.0,
+      "citation_hit": 0.966,
+      "unsupported_rate": 0.172,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 1.0
+    },
+    "clarifications": 1
+  },
+  "failures": [
+    {
+      "id": "q05",
+      "text": "What is the learning budget per year?",
+      "answer": "The learning budget is 800 USD per calendar year for courses, books and conferences, available after probation. Since your probation is finished, this full annual amount applies to you.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q09",
+      "text": "How do I request a new laptop?",
+      "answer": "As a full-time employee whose probation is finished, you can place your request like any other internal request. All internal requests are submitted through the ticket portal, and requests sent by chat or email are not tracked. Standard laptops are replaced every 3 years, so include your current dev",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q12",
+      "text": "What happens to my unused vacation days at the end of the year?",
+      "answer": "At the end of the year, up to 5 of your unused annual leave days carry over until 31 March of the following year, and any days beyond that expire. Since your probation is already finished, the standard carry-over rule applies to you.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q15",
+      "text": "Is there a maximum number of days in one annual leave request?",
+      "answer": "Yes, our HR policies set a limit: a single annual leave request may not exceed 10 working days. Since your probation is finished, this standard rule applies to you like any other employee.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q29",
+      "text": "How do I cancel approved leave?",
+      "answer": "You can cancel an approved leave request before its first day by contacting HR. This applies to any approved leave, including your own as a full-time employee whose probation has finished.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "clarify",
+      "answer": "Which notice period do you mean — for resignation, termination, or another topic?",
+      "steps": [
+        "router {'label': 'policy_question', 'reason': 'Asking about company resignation notice period policy.'}",
+        "collector {'needs_clarification': True}"
+      ],
+      "fabricated": false,
+      "refers_to_hr": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "component": "collector_dev",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "leave": {
+      "n": 9,
+      "slot_accuracy": {
+        "leave_type": 1.0,
+        "start_date": 1.0,
+        "end_date": 1.0
+      },
+      "all_slots_correct": 1.0,
+      "missing_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "policy_clarification": {
+      "n": 9,
+      "accuracy": 0.889,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    }
+  },
+  "failures": [
+    {
+      "id": "d10",
+      "text": "What is the limit?",
+      "expected": true,
+      "actual": false,
+      "question": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "component": "collector_collector_dev",
+  "model": "inclusionai/ling-3.2-flash:free",
+  "metrics": {
+    "leave": {
+      "n": 9,
+      "slot_accuracy": {
+        "leave_type": 0.889,
+        "start_date": 1.0,
+        "end_date": 1.0
+      },
+      "all_slots_correct": 0.889,
+      "missing_detection": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "policy_clarification": {
+      "n": 4,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "failures": [
+    {
+      "id": "d08",
+      "text": "How many vacation days do I have?",
+      "expected": {
+        "action": "balance",
+        "leave_type": null,
+        "start_date": null,
+        "end_date": null
+      },
+      "actual": {
+        "leave_type": "annual",
+        "start_date": null,
+        "end_date": null
+      }
+    }
+  ]
+}

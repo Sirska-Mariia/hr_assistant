@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/hr.db
+logs/
+.pytest_cache/
+patch_round4.py

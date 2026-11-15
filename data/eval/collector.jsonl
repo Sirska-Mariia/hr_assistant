@@ -1,0 +1,22 @@
+{"id": "c01", "text": "I want annual leave from 7 to 11 December", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2026-12-07", "end_date": "2026-12-11"}}
+{"id": "c02", "text": "I need a day off next Friday", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": null, "start_date": "2026-11-20", "end_date": "2026-11-20"}}
+{"id": "c03", "text": "I'm sick today", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "sick", "start_date": "2026-11-16", "end_date": "2026-11-16"}}
+{"id": "c04", "text": "Book vacation for 3 December", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2026-12-03", "end_date": "2026-12-03"}}
+{"id": "c05", "text": "I'd like unpaid leave", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "unpaid", "start_date": null, "end_date": null}}
+{"id": "c06", "text": "Vacation for the whole of next week", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2026-11-23", "end_date": "2026-11-27"}}
+{"id": "c07", "text": "Annual leave 14 Dec - 18 Dec", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2026-12-14", "end_date": "2026-12-18"}}
+{"id": "c08", "text": "I want to take some time off", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": null, "start_date": null, "end_date": null}}
+{"id": "c09", "text": "Sick leave last Friday", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "sick", "start_date": "2026-11-13", "end_date": "2026-11-13"}}
+{"id": "c10", "text": "Unpaid leave from 1 Dec to 3 Dec", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "unpaid", "start_date": "2026-12-01", "end_date": "2026-12-03"}}
+{"id": "c11", "text": "Unpaid leave 20-22 January 2027", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "unpaid", "start_date": "2027-01-20", "end_date": "2027-01-22"}}
+{"id": "c12", "text": "Annual leave from 4 January to 8 January 2027", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2027-01-04", "end_date": "2027-01-08"}}
+{"id": "c13", "text": "I need sick leave tomorrow", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "sick", "start_date": "2026-11-17", "end_date": "2026-11-17"}}
+{"id": "c14", "text": "Take vacation starting 9 December until 11 December", "today": "2026-11-16", "intent": "leave_request", "gold": {"leave_type": "annual", "start_date": "2026-12-09", "end_date": "2026-12-11"}}
+{"id": "c15", "text": "How many annual leave days do I get?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "c16", "text": "Can I take leave?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}
+{"id": "c17", "text": "What is the notice period?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}
+{"id": "c18", "text": "How does the learning budget work?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "c19", "text": "Do I get the benefit?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}
+{"id": "c20", "text": "Can I work from abroad?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "c21", "text": "How long is probation?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": false}}
+{"id": "c22", "text": "How do I get it?", "today": "2026-11-16", "intent": "policy_question", "gold": {"needs_clarification": true}}

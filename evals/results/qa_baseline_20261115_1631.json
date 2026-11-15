@@ -1,0 +1,206 @@
+{
+  "component": "qa_baseline",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_answerable": 29,
+    "n_unanswerable": 16,
+    "referral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "answerable": {
+      "correctness": 1.0,
+      "citation_hit": 0.0,
+      "unsupported_rate": 0.241,
+      "wrongly_referred": 0.0
+    },
+    "unanswerable": {
+      "fabrication_rate": 0.0
+    },
+    "partial": {
+      "n": 5,
+      "flagged_as_partial": 0.0
+    },
+    "clarifications": 0
+  },
+  "failures": [
+    {
+      "id": "q03",
+      "text": "How much notice do I need for unpaid leave?",
+      "answer": "You must request unpaid leave at least **5 working days** before the first day of leave (Policy 4.1).\n\nNotice is counted in working days from the day you submit the request (inclusive) up to the day before your leave starts (Policy 4.2). Note that working days are Monday–Friday, excluding company ho",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q05",
+      "text": "What is the learning budget per year?",
+      "answer": "The learning budget is **800 USD per calendar year** for courses, books, and conferences, available after probation (Benefits Policy 3.1).\n\nNote: During probation, employees may use up to 200 USD of the learning budget, but only for courses marked mandatory by their manager (Onboarding Policy 4.2). ",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q06",
+      "text": "Does the company pay for my health insurance?",
+      "answer": "Yes, the company pays 100% of the basic private health insurance plan for you as the employee. However, if you want to add family coverage, that would be at your own cost through the insurer.\n\nOne thing to keep in mind: your health insurance starts after you complete your probation period, not on yo",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q13",
+      "text": "How many sick days do I get a year?",
+      "answer": "You get **10 paid sick days per calendar year** if you are a full-time employee, from your first day of employment. Note that contractors are not entitled to paid sick leave, and unused sick days do not carry over to the next year.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "q17",
+      "text": "Can I take unpaid leave while on probation?",
+      "answer": "Yes. According to the policy, during the probation period (the first 3 months from your start date), annual leave cannot be taken, but **sick leave and unpaid leave remain available**.\n\nJust remember the standard rules for unpaid leave:\n- You must request it at least **5 working days** before the fi",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 3
+    },
+    {
+      "id": "n01",
+      "text": "Is there a parental leave policy?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about a parental leave policy. The documents only cover general leave eligibility, annual leave limits, and sick leave provisions. You would need ",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n02",
+      "text": "How much is my salary?",
+      "kind": "answer",
+      "answer": "I don't have information about your specific salary in the provided context. The policies cover health insurance, remote work rules, and a home office allowance, but they don't include any salary deta",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n03",
+      "text": "Can I get a raise after probation?",
+      "kind": "answer",
+      "answer": "The provided policies do not contain any information about raises or salary adjustments after probation. The context only covers wellness benefits, health insurance, learning budget during onboarding,",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n04",
+      "text": "Does the company offer stock options?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about stock options. The policies cover health insurance, onboarding, and access requests, but do not mention stock options or equity compensation",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n05",
+      "text": "I'm being harassed by a colleague, what should I do?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about harassment, reporting procedures, or related policies. The context only covers:\n\n- **Remote Work Policy** (fully remote work and working fro",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n06",
+      "text": "Does the company pay for relocation to another city?",
+      "kind": "answer",
+      "answer": "The provided policies do not mention relocation or relocation benefits, so there is no information indicating whether the company pays for relocation to another city. You may need to consult the compa",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n07",
+      "text": "Can I take a sabbatical year?",
+      "kind": "answer",
+      "answer": "The provided policies do not mention sabbaticals. They only cover annual leave (20 days), sick leave (10 days), and unpaid leave (up to 10 working days per calendar year). Since a sabbatical year is n",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n08",
+      "text": "Can I bring my dog to the office?",
+      "kind": "answer",
+      "answer": "I don't have any information about a pet policy in the provided context. The documents only cover remote work, leave requests, and leave cancellation rules. You'll need to check the employee handbook ",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n09",
+      "text": "What is the dress code?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about a dress code. The documents only cover the Leave Policy (eligibility, probation, and contractor scope) and the Onboarding Policy (laptop shi",
+      "fabricated": false,
+      "refers_to_hr": false
+    },
+    {
+      "id": "n10",
+      "text": "What is the maternity leave duration?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about maternity leave or its duration. The policy sections included only cover notice and approval, eligibility, and limits for annual leave, sick",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n11",
+      "text": "Will the company sponsor my visa?",
+      "kind": "answer",
+      "answer": "The provided policies do not contain any information about visa sponsorship. The Remote Work Policy covers short-term work abroad (up to 20 working days) and notes that tax/legal implications of longe",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n12",
+      "text": "How do I report a conflict with my manager?",
+      "kind": "answer",
+      "answer": "The provided policies do not include any procedure for reporting a conflict with a manager. You would need to consult a different policy (such as a Grievance or Code of Conduct policy) or contact HR d",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n13",
+      "text": "Can I get a loan from the company?",
+      "kind": "answer",
+      "answer": "I don't have any information about company loans in the provided policies. The available documents only cover remote work, leave, and internal access requests — none of them mention employee loans or ",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n14",
+      "text": "How long is the notice period if I resign?",
+      "kind": "answer",
+      "answer": "The provided context does not contain any information about resignation or the notice period for resigning. The policy sections included only cover notice and approval for leave requests, leave limits",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n15",
+      "text": "Does the company offer a pension plan?",
+      "kind": "answer",
+      "answer": "The provided context does not mention a pension plan, so I can't confirm whether Nordlight Software offers one. The policies shown cover health insurance, learning budget, and leave types only. I reco",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "n16",
+      "text": "Does health insurance cover dental treatment?",
+      "kind": "answer",
+      "answer": "The provided policies do not specify whether the basic private health insurance plan covers dental treatment. You would need to check the details of the specific insurance plan with the insurer or HR ",
+      "fabricated": false,
+      "refers_to_hr": true
+    },
+    {
+      "id": "p01",
+      "text": "What health insurance do I get and what is the dress code?",
+      "answer": "The company pays 100% of the basic private health insurance plan for you, and family coverage is available at your own cost through the insurer. Health insurance starts after probation.\n\nThe provided context does not contain any information about a dress code.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    },
+    {
+      "id": "p03",
+      "text": "What is the learning budget and do you offer stock options?",
+      "answer": "The learning budget is 800 USD per calendar year for courses, books, and conferences, available after probation (with a 200 USD exception during probation for mandatory courses only). The provided policies do not mention anything about stock options, so I cannot confirm whether they are offered.",
+      "fact_coverage": 1.0,
+      "unsupported_claims": 1
+    }
+  ]
+}

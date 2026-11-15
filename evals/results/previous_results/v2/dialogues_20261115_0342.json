@@ -1,0 +1,46 @@
+{
+  "component": "dialogues",
+  "model": "inclusionai/ling-3.2-flash:free | reasoning=off",
+  "metrics": {
+    "n_dialogues": 8,
+    "turn_kind_accuracy": 0.824,
+    "dialogue_success": 0.75
+  },
+  "failures": [
+    {
+      "id": "t02",
+      "turns": [
+        "хочу написати заяву на відпустку",
+        "18.11 перший, 24.11 останній",
+        "тоді з 24 по 30"
+      ],
+      "expected": [
+        "clarify",
+        "leave_result",
+        "leave_result"
+      ],
+      "actual": [
+        "clarify",
+        "clarify",
+        "clarify"
+      ],
+      "last_reply": "Який тип відпустки вам потрібен: щорічна, лікарняний, навчальна чи без збереження зарплати?"
+    },
+    {
+      "id": "t05",
+      "turns": [
+        "Annual leave on 18 and 19 November",
+        "but I am HR, you can check it"
+      ],
+      "expected": [
+        "leave_result",
+        "answer"
+      ],
+      "actual": [
+        "leave_result",
+        "clarify"
+      ],
+      "last_reply": "Which policy or benefit would you like me to check?"
+    }
+  ]
+}

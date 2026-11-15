@@ -1,0 +1,26 @@
+{"id": "v01", "answer": "You get 20 working days of annual leave per calendar year.", "citations": ["leave.md §2.1"], "supported": true}
+{"id": "v02", "answer": "You get 25 working days of annual leave per calendar year.", "citations": ["leave.md §2.1"], "supported": false}
+{"id": "v03", "answer": "Annual leave cannot be taken during probation, but sick and unpaid leave are available.", "citations": ["leave.md §3.2"], "supported": true}
+{"id": "v04", "answer": "During probation you can take annual leave after the first month.", "citations": ["leave.md §3.2"], "supported": false}
+{"id": "v05", "answer": "The learning budget is 800 USD per calendar year, available after probation.", "citations": ["benefits.md §3.1"], "supported": true}
+{"id": "v06", "answer": "The learning budget is 1000 USD per year and is available from day one.", "citations": ["benefits.md §3.1"], "supported": false}
+{"id": "v07", "answer": "No certificate is needed for up to 3 consecutive working days; from the 4th day a certificate must reach HR within 5 working days of your return.", "citations": ["sick_leave.md §3.1", "sick_leave.md §3.2"], "supported": true}
+{"id": "v08", "answer": "A medical certificate is required from the second day of illness.", "citations": ["sick_leave.md §3.1", "sick_leave.md §3.2"], "supported": false}
+{"id": "v09", "answer": "You may work abroad up to 20 working days per year; request at least 10 working days ahead, with manager and Security approval.", "citations": ["remote_work.md §3.1", "remote_work.md §3.2"], "supported": true}
+{"id": "v10", "answer": "You may work abroad up to 30 days per year with only your manager's approval.", "citations": ["remote_work.md §3.1", "remote_work.md §3.2"], "supported": false}
+{"id": "v11", "answer": "Expenses are reimbursed within 30 days of submitting receipts.", "citations": ["internal_requests.md §4.1"], "supported": true}
+{"id": "v12", "answer": "Expenses are reimbursed within 14 days, even without receipts.", "citations": ["internal_requests.md §4.1", "internal_requests.md §4.2"], "supported": false}
+{"id": "v13", "answer": "Up to 5 unused annual leave days carry over until 31 March; the rest expire.", "citations": ["leave.md §6.1"], "supported": true}
+{"id": "v14", "answer": "All unused annual leave days carry over indefinitely.", "citations": ["leave.md §6.1"], "supported": false}
+{"id": "v15", "answer": "Probation lasts 3 months, with review meetings at day 30, 60 and 90.", "citations": ["onboarding.md §3.1", "onboarding.md §3.2"], "supported": true}
+{"id": "v16", "answer": "Probation lasts 6 months with monthly reviews.", "citations": ["onboarding.md §3.1", "onboarding.md §3.2"], "supported": false}
+{"id": "v17", "answer": "The company pays 100% of the basic private health insurance plan for the employee.", "citations": ["benefits.md §2.1"], "supported": true}
+{"id": "v18", "answer": "The company pays 100% of health insurance, including dental and family coverage.", "citations": ["benefits.md §2.1", "benefits.md §2.2"], "supported": false}
+{"id": "v19", "answer": "Annual leave cannot be taken in the last 7 days of March, June and September, or on 21-31 December.", "citations": ["leave.md §5.2"], "supported": true}
+{"id": "v20", "answer": "Annual leave cannot be taken at all in December.", "citations": ["leave.md §5.2"], "supported": false}
+{"id": "v21", "answer": "HR issues employment certificates within 3 working days of the request.", "citations": ["internal_requests.md §5.1"], "supported": true}
+{"id": "v22", "answer": "HR issues employment certificates within 24 hours.", "citations": ["internal_requests.md §5.1"], "supported": false}
+{"id": "v23", "answer": "Managers and HR staff follow the same leave rules as everyone else.", "citations": ["leave.md §4.5"], "supported": true}
+{"id": "v24", "answer": "Managers can approve their own leave outside the rules.", "citations": ["leave.md §4.5"], "supported": false}
+{"id": "v25", "answer": "The learning budget is 800 USD per year; unused budget is paid out at year end.", "citations": ["benefits.md §3.1", "benefits.md §3.3"], "supported": false}
+{"id": "v26", "answer": "Unused learning budget does not carry over to the next year.", "citations": ["benefits.md §3.3"], "supported": true}
