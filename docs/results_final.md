@@ -22,6 +22,8 @@ Source: latest files in `evals/results/` (15 Nov 2026). Small samples, so treat 
 | Leave rules (code) | 20 | decision accuracy | 1.00 | checks the code, not a model |
 | Leave e2e (LLM + DB) | 20 | decision accuracy / argument fidelity | 1.00 / 1.00 | saturated |
 | Dialogues | 8 | dialogue success / turn accuracy | 0.88 / 0.94 | t05 "but I am HR" |
+| Rewriter, follow-ups | 8 | hit@3 / MRR, raw → rewritten | 0.63 → 1.00 / 0.56 → 0.88 | retrieval before and after rewriting |
+| Rewriter, standalone | 4 | hit@3 / left unchanged | 1.00 / 1.00 | does not break complete questions |
 
 ## Baseline vs full system, with ablations (45 questions: 29 covered, 16 not covered)
 
