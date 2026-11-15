@@ -27,6 +27,9 @@ flowchart TD
     V -- supported --> OUT[Answer with sources, plus HR note if partial]
 ```
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2f83749b-3b4a-44f5-9745-8fbc326ec896" />
+
+
 | Component | Purpose | Input -> Output | Model call / tool |
 |---|---|---|---|
 | Router | Intent: policy / leave / out of scope | message + previous assistant message -> label | LLM |
